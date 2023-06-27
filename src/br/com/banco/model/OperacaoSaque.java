@@ -18,7 +18,7 @@ public class OperacaoSaque {
 			cliente.setNome("Rambo");
 			
 			Operacao op  = new Operacao(conta);
-			Double valor = op.sacar(1900.0);
+			Double valor = op.sacar(200.0);
 			
 			System.out.println("Saque efetuado com sucesso! valor: "+valor);
 		}catch(IllegalArgumentException ex) {

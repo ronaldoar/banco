@@ -13,9 +13,10 @@ public class Operacao {
 		return valor;
 	}
 	
-	public void depositar(Double valor) {
-		if(valor <= 0)throw new IllegalArgumentException("Saldo inválido.");
+	public Double depositar(Double valor) {
+		if(valor <= 0)throw new IllegalArgumentException("Valor inválido.");
 		Double total = valor + conta.getSaldo();
 		conta.setSaldo(total);
+		return total;
 	}
 }

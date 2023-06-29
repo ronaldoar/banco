@@ -3,20 +3,22 @@ package br.com.banco.model;
 public class Operacao {
 	
 	private Conta conta;
+	private Double valor;
 	
-	public Operacao(Conta conta) {
+	public Operacao(Conta conta, Double valor) {
 		this.conta = conta;
+		this.valor = valor;
 	}
 	
-	public Double sacar(Double valor) {
-		if(valor > conta.getSaldo())throw new IllegalArgumentException("Saldo insuficiente.");
-		return valor;
+	public void depositar() {
+		
 	}
 	
-	public Double depositar(Double valor) {
-		if(valor <= 0)throw new IllegalArgumentException("Valor inválido.");
-		Double total = valor + conta.getSaldo();
-		conta.setSaldo(total);
-		return total;
+	public void sacar() {
+		
+	}
+	
+	public void transferir() {
+		
 	}
 }

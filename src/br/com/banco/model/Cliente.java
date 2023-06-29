@@ -1,13 +1,18 @@
 package br.com.banco.model;
 
-import java.util.List;
-
 public class Cliente {
-
+	
+	private String id;
 	private String nome;
 	private String cpf;
-	private List<Conta>contas;
+	private Conta conta;
 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -20,11 +25,11 @@ public class Cliente {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public List<Conta> getContas() {
-		return contas;
+	public Conta getConta() {
+		return conta;
 	}
-	public void setContas(List<Conta> contas) {
-		this.contas = contas;
+	public void setConta(Conta conta) {
+		this.conta = conta;
 	}
 	
 }

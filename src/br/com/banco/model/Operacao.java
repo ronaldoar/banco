@@ -2,23 +2,19 @@ package br.com.banco.model;
 
 public class Operacao {
 	
-	private Conta conta;
-	private Double valor;
-	
-	public Operacao(Conta conta, Double valor) {
-		this.conta = conta;
-		this.valor = valor;
+	public void depositar(String[] registros) {
+		//salvar aquivo texto aqui
 	}
 	
-	public void depositar() {
-		
+	public String preparar(Cliente depositante, Cliente depositado, Double valor) {
+		String id    = depositado.getId();
+		String banco = depositado.getConta().getBanco();
+		String nome  = depositado.getNome();
+		String ag    = depositado.getConta().getAgencia().toString();
+		String cc    = depositado.getConta().getNumero().toString();
+		String v     = valor.toString();
+		String registro = id+","+banco+","+nome+","+ag+","+cc+","+v+","+depositante.getCpf()+"-";
+		return registro;
 	}
 	
-	public void sacar() {
-		
-	}
-	
-	public void transferir() {
-		
-	}
 }

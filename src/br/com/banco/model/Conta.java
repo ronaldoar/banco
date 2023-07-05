@@ -2,10 +2,17 @@ package br.com.banco.model;
 
 public class Conta {
 	
+	private String banco;
 	private Integer agencia;
 	private Long numero;
 	private Double saldo;
 	
+	public String getBanco() {
+		return banco;
+	}
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
 	public Integer getAgencia() {
 		return agencia;
 	}

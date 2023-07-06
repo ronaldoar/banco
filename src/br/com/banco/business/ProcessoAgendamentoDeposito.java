@@ -5,7 +5,6 @@ import java.util.List;
 
 import br.com.banco.model.Cliente;
 import br.com.banco.model.Conta;
-import br.com.banco.model.Operacao;
 import br.com.banco.util.FileUtils;
 
 public class ProcessoAgendamentoDeposito {
@@ -50,9 +49,33 @@ public class ProcessoAgendamentoDeposito {
 	}
 	
 	public static void depositar(List<Cliente>clientes) {
+		int contS = 1;
+		int contN = 1;
+		
+		List<Cliente>bancoSul   = new ArrayList<Cliente>();
+		List<Cliente>bancoNorte = new ArrayList<Cliente>();
 		
 		for(Cliente c : clientes) {
-			//new Operacao().preparar(c, c.getConta().getSaldo());
+			if(c.getConta().getBanco().equals("BANCO_SUL")) {
+				if(contS <= 6) {
+					bancoSul.add(c);
+					contS++;
+				}
+				
+			}else if(c.getConta().getBanco().equals("BANCO_NORTE")) {
+				if(contN <= 6) {
+					bancoNorte.add(c);
+					contN++;
+				}
+			}
+		}
+		
+		
+		//clientes norte
+		//clientes sul
+		
+		for(int i=0; i<=6; i++) {
+			
 		}
 	}
 }

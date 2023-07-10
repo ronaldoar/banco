@@ -69,13 +69,22 @@ public class ProcessoAgendamentoDeposito {
 				}
 			}
 		}
+
 		
-		
-		//clientes norte
-		//clientes sul
-		
-		for(int i=0; i<=6; i++) {
+		for(int i=0; i<=5; i++) {
 			
-		}
+			Cliente clienteNorte = bancoNorte.get(i);
+		    Cliente clienteSul = bancoSul.get(i);
+		    
+		    double saldoAtualNorte = clienteNorte.getConta().getSaldo();
+		    double novoSaldoNorte = saldoAtualNorte - 100.0;
+		    clienteNorte.getConta().setSaldo(novoSaldoNorte);
+		    
+		    double saldoAtualSul = clienteSul.getConta().getSaldo();
+		    double novoSaldoBancoSul = saldoAtualSul + 100.0;
+		    clienteSul.getConta().setSaldo(novoSaldoBancoSul);
+		    
+		    
+		}		
 	}
 }
